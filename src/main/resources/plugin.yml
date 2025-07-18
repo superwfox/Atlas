@@ -1,0 +1,4 @@
+name: Atlas
+version: '1.0'
+main: sudark2.Sudark.atlas.Atlas
+api-version: '1.21'
