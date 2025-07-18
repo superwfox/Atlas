@@ -75,4 +75,4 @@ The plugin provides a single command, `/atlas`, with two subcommands for operato
 Contributions are welcome! Please submit issues or pull requests to the [repository](#) (replace with your actual repository link). For major changes, open an issue first to discuss your ideas.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](#) file for details (replace with your actual license file).
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/superwfox/Atlas/blob/master/license.txt) file for details (replace with your actual license file).
