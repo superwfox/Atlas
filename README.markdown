@@ -65,14 +65,8 @@ The plugin provides a single command, `/atlas`, with two subcommands for operato
 - Autosave only tracks blocks modified through `BlockPlaceEvent` and `BlockBreakEvent`. Other changes (e.g., explosions, piston movements) are not tracked.
 - Large ranges in `/atlas save` or `/atlas load` may cause temporary server load. Use reasonable ranges (e.g., ≤50) for best performance.
 
-## Future Improvements
-- Add support for tracking additional block changes (e.g., explosions, redstone updates).
-- Implement configurable autosave intervals and timezones.
-- Add permissions for non-operator players to use specific commands.
-- Support for multiple backup worlds or versioned backups.
-
 ## Contributing
-Contributions are welcome! Please submit issues or pull requests to the [repository](#) (replace with your actual repository link). For major changes, open an issue first to discuss your ideas.
+Contributions are welcome! Please submit issues or pull requests. For major changes, open an issue first to discuss your ideas.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/superwfox/Atlas/blob/master/license.txt) file for details (replace with your actual license file).
