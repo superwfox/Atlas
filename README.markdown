@@ -1,5 +1,7 @@
 # Atlas Plugin for Paper 1.21
 
+ [让我们说中文！](https://github.com/superwfox/Atlas/blob/master/README_zh.markdown)
+
 ## Introduction
 Atlas is a lightweight and efficient plugin designed for Paper 1.21 servers, providing seamless world hot-restore functionality. It allows administrators to save and load specific regions of a Minecraft world, with automatic backups and precise block management. Atlas is ideal for server administrators who need to preserve and restore specific areas of their world dynamically, such as for creative builds, event areas, or rollback purposes.
 
