@@ -69,4 +69,4 @@
 喜欢 Atlas？想让它更牛？来[仓库](#)（替换成你的实际链接）提交 issue 或 PR 吧！大改动前先开个 issue 聊聊，免得白忙活哦！
 
 ## 许可证
-本项目用 MIT 许可证，自由又大方！详情看 [LICENSE](#) 文件（替换成你的实际许可证文件）。
+本项目用 MIT 许可证，自由又大方！详情看 [LICENSE](https://github.com/superwfox/Atlas/blob/master/license.txt) 文件（替换成你的实际许可证文件）。
