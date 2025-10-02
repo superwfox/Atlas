@@ -1,5 +1,6 @@
 package sudark2.Sudark.atlas;
 
+import net.kyori.adventure.key.Key;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -13,8 +14,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import static org.bukkit.plugin.java.JavaPlugin.getPlugin;
-import static sudark2.Sudark.atlas.Atlas.BackWorld;
-import static sudark2.Sudark.atlas.Atlas.preBlocks;
+import static sudark2.Sudark.atlas.Atlas.*;
 
 public class BlocksManager {
 
@@ -28,6 +28,17 @@ public class BlocksManager {
             BlockState copyState = srcState.copy(targetLoc);
             copyState.update(true, false);
         }
+    }
+
+    public static void autoBack() {
+        int centerX = 31;
+        int centerY = 75;
+        int centerZ = 10;
+
+        int radius = 117;
+        int radiusY = 49;
+        int radiusZ = 70;
+        load(new Location(mainWorld, centerX, centerY, centerZ), radius);
     }
 
     public static void save(Player pl, int range) {
@@ -51,11 +62,10 @@ public class BlocksManager {
         }
     }
 
-    public static void load(Player pl, int range) {
+    public static void load(Location plLoc, int range) {
         Queue<Location> temBlocks = new LinkedList<>();
         World origin = Bukkit.getWorld(BackWorld);
-        World targetWorld = pl.getWorld();
-        Location plLoc = pl.getLocation();
+        World targetWorld = plLoc.getWorld();
         int x = plLoc.getBlockX();
         int y = plLoc.getBlockY();
         int z = plLoc.getBlockZ();
@@ -71,9 +81,9 @@ public class BlocksManager {
         new BukkitRunnable() {
             @Override
             public void run() {
-                for (int i = 0; i < 64; i++) {
+                for (int i = 0; i < 4096; i++) {
                     Location targetLoc = temBlocks.poll();
-                    if (targetLoc == null) break;
+                    if (targetLoc == null) continue;
                     Block srcBlock = targetLoc.getBlock();
                     if (srcBlock.getType().equals(Material.AIR)) continue;
 
@@ -87,7 +97,7 @@ public class BlocksManager {
                     cancel();
                 }
             }
-        }.runTaskTimer(getPlugin(Atlas.class), 0, 1);
+        }.runTaskTimer(getPlugin(Atlas.class), 0, 0);
     }
 
 }

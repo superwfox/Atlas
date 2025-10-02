@@ -6,6 +6,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
+import static sudark2.Sudark.atlas.BlocksManager.autoBack;
 import static sudark2.Sudark.atlas.BlocksManager.autoSave;
 
 public class Clock {
@@ -17,6 +18,7 @@ public class Clock {
                 if (ZonedDateTime.now(ZoneId.of("Asia/Shanghai")).getHour() == 4) {
                     autoSave();
                 }
+                autoBack();
             }
         }.runTaskTimer(plugin, 0, 20 * 60 * 60L);
     }

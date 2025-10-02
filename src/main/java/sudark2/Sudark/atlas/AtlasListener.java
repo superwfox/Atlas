@@ -14,12 +14,14 @@ public class AtlasListener implements Listener {
     @EventHandler
     public void blockPlace(BlockPlaceEvent event) {
         Location loc = event.getBlock().getLocation();
+        if (Math.abs(loc.getBlockX()) < 200 && Math.abs(loc.getBlockZ()) < 100) return;
         if (loc.getWorld().equals(mainWorld)) preBlocks.add(loc);
     }
 
     @EventHandler
     public void blockBreak(BlockBreakEvent event) {
         Location loc = event.getBlock().getLocation();
+        if (Math.abs(loc.getBlockX()) < 200 && Math.abs(loc.getBlockZ()) < 100) return;
         if (loc.getWorld().equals(mainWorld)) preBlocks.remove(loc);
     }
 

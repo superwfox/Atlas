@@ -1,8 +1,6 @@
 package sudark2.Sudark.atlas;
 
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
 public class CommandExecutor implements org.bukkit.command.CommandExecutor {
 
@@ -14,7 +12,7 @@ public class CommandExecutor implements org.bukkit.command.CommandExecutor {
 
             switch (args[0]) {
                 case "save" -> BlocksManager.save(pl, Integer.valueOf(args[1]));
-                case "load" -> BlocksManager.load(pl, Integer.valueOf(args[1]));
+                case "load" -> BlocksManager.load(pl.getLocation(), Integer.valueOf(args[1]));
             }
             return true;
         }
